@@ -1,10 +1,19 @@
 import { Section, Container, CountryInfo, Loader } from 'components';
 
+import { useLocation } from 'react-router-dom';
+// import { useRef } from 'react';
+
 export const Country = () => {
+  const location = useLocation();
+  const goBackLink = location?.state?.from ?? '/';
+  // const goBackLink = useRef(location?.state?.from ?? '/');
+
   return (
     <Section>
       <Container>
-        <h2>Country</h2>
+        {/* {error}
+        {isLoading} */}
+        <CountryInfo></CountryInfo>
       </Container>
     </Section>
   );
