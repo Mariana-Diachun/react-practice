@@ -13,6 +13,7 @@ export const Home = () => {
           <Heading textAlign="center"> OOOPS! Something went wrong! </Heading>
         )}
         {isLoading && <Loader />}
+        <CountryList countries={countries} />
       </Container>
     </Section>
   );
